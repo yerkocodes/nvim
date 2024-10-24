@@ -1,47 +1,82 @@
-call plug#begin('~/.config/nvim/.vim/plugged')
+" Usar vim-plug para gestionar plugins
+call plug#begin('~/.local/share/nvim/plugged')
 
-"Plug 'NLKNguyen/papercolor-theme'       "Theme
-"Plug 'rafi/awesome-vim-colorschemes'    "Themes
-"Plug 'dkprice/vim-easygrep'             "Search
-"Plug 'sheerun/vim-polyglot'             "Syntax highlight for multiple languages
-Plug 'ap/vim-css-color'                 "CSS Color
-Plug 'scrooloose/nerdtree'              "Tree Directory
-Plug 'ryanoasis/vim-devicons'           "Developer Icons -- working just nerdFonts
-Plug 'christoomey/vim-tmux-navigator'   "TMUX Navigator
-""Plug 'github/compilot.vim'              "Github compilot
-
-""Typescript
-"Plug 'leafgarland/typescript-vim'
-"Plug 'ianks/vim-tsx'
-
-""IDE
-Plug 'yggdroot/indentline'                                "Code indentation
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }       "Command-line Fuzzy Finder
-Plug 'junegunn/fzf.vim'                                   "Command-line Fuzzy Finder
-Plug 'mhinz/vim-signify'                                  "???
-Plug 'preservim/nerdcommenter'
-
-""Status Bar
-Plug 'maximbaz/lightline-ale'
-Plug 'itchyny/lightline.vim'
-Plug 'itchyny/vim-gitbranch'
-
-""Typing
-Plug 'alvan/vim-closetag' "HTML close tags <div> --> <div></div>
-Plug 'jiangmiao/auto-pairs'  "Syntax close { --> {}
-
-"Snippets autocomplete
-Plug 'SirVer/ultisnips'
-Plug 'neoclide/coc.nvim', {'branch':'release'}
-
-"" Git
-Plug 'tpope/vim-fugitive'
+" Plugins esenciales
+Plug 'neoclide/coc.nvim', {'branch': 'release'}             " Autocompletado y LSP
+Plug 'tpope/vim-fugitive'                                   " Integración de Git
 Plug 'tpope/vim-repeat'
+Plug 'sheerun/vim-polyglot'                                 " Soporte para múltiples lenguajes
+Plug 'prettier/vim-prettier', { 'do': 'npm install' }       " Formateo de código
+Plug 'scrooloose/nerdtree'                                  " Explorador de archivos
+Plug 'preservim/nerdcommenter'
+Plug 'christoomey/vim-tmux-navigator'                       "TMUX Navigator
+Plug 'Yggdroot/indentLine'                                  " Líneas de indentación
 
-"" Live Server Bracey
-"Plug 'turbio/bracey.vim', {'do': 'npm install --prefix server'}
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }         " Fuzzy finder
+Plug 'junegunn/fzf.vim'                                     " Integración de fzf con Vim
 
-" SmoothScrolling
-Plug 'psliwka/vim-smoothie' "Smoothing in scroll
+Plug 'airblade/vim-gitgutter'                               " Indicador de cambios en Git
+
+Plug 'maximbaz/lightline-ale'                               " Errores y advertencias en la barra de estado
+Plug 'itchyny/lightline.vim'                                " Barra de estado personalizable y minimalista
+Plug 'itchyny/vim-gitbranch' " Rama actual de Git en la barra de estado
 
 call plug#end()
+
+"************ CONFIG ************
+
+" Configuración de COC (Conquer of Completion)
+" Asegúrate de tener Node.js instalado para usar COC
+"
+" Extensiones de CoC
+" - coc-tsserver: Soporte para TypeScript y JavaScript
+" - coc-html: Soporte para HTML
+" - coc-css: Soporte para CSS
+" - coc-angular: Soporte para Angular
+" - coc-prettier: Formateador de código
+" - coc-eslint: Soporte para ESLint
+" - coc-json: Soporte para JSON
+" - coc-snippets: Soporte para snippets
+let g:coc_global_extensions = ['coc-tsserver', 'coc-html', 'coc-css', 'coc-angular', 'coc-prettier', 'coc-eslint', 'coc-json', 'coc-snippets']
+
+" Configuración de Prettier
+let g:prettier#autoformat = 1
+let g:prettier#autoformat_require_pragma = 0
+
+" NERDTREE
+let NERDTreeShowHidden=1     "Muestra los archivos y directorios ocultos
+let NERDTreeQuitOnOpen=1
+let g:NERDTreeDirArrowExpandable="+"
+let g:NERDTreeDirArrowCollapsible="~"
+
+"IdentLine
+let g:indentLine_char_list = ['|', '¦', '¦', '¦']
+let g:indentLine_fileType=['javascript', 'html', 'css', 'scss', 'typescript', 'vim', 'nerdtree', 'json', 'sql', 'mysql']
+"let g:indentLine_indentLevel= 20
+let g:indentLine_concealcursor = 'inc'
+let g:indentLine_conceallevel = 1
+
+"   Lightlane
+let g:lightline = {
+            \ 'colorscheme': 'wombat',
+            \ 'active': {
+            \   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
+            \   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+            \ },
+            \ 'inactive': {
+            \   'left': [['inactive'], ['relativepath']],
+            \   'right': [['bufnum']]
+            \ },
+            \ 'component': {
+            \   'bufnum': '%n',
+            \   'inactive': 'inactive'
+            \ },
+            \ 'component_function': {
+            \   'gitbranch': 'gitbranch#name',
+            \   'kitestatus': 'kite#statusline'
+            \ },
+            \ 'subseparator': {
+            \   'left': '¦',
+            \   'right': '¦'
+            \ }
+            \}

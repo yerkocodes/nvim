@@ -1,65 +1,52 @@
-""		KEYMAP
 let mapleader=" "
 
-"KEYMAP TO CHANDE DARK AND LIGHT MODE
-nmap <Leader>dt :call ChangeTheme('dark', 'PaperColor')<CR>
-nmap <Leader>lt :call ChangeTheme('light', 'PaperColor')<CR>
-
-nmap <A-j> :m .+1<CR>==
-nmap <A-k> :m .-2<CR>==
-imap <A-j> <Esc>:m .+1<CR>==gi
-imap <A-k> <Esc>:m .-2<CR>==gi
-vmap <A-j> :m '>+1<CR>gv=gv
-vmap <A-k> :m '<-2<CR>gv=gv
-
-"TABS moving
-nmap <C-n> :tabnew .<CR>
-nmap <C-Right> :tabnext <CR>
-nmap <C-Left> :tabprevious <CR>
-
-nmap <Leader>nt :NERDTreeFind<CR>
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
+nmap <Leader>wq :q<CR>
 
-"Copy into vim in visual mode - Remember install xclip in Linux
-vmap <C-c> "+y
+"NERDTreeFind
+nmap <Leader>nt :NERDTreeFind<CR>
 
-"Search Files with fzf Fuzzy Finder
-nmap <Leader>p :Files<CR>
-"Search keywords with The Silver Searcher
-nmap <Leader>ag :Ag<CR>
-
-"" Live Server Bracey
-"let g:bracey_browser_command='firefox'
-"" Run LiveServer
-"nmap <Leader>b :Bracey<CR>
-"" Stop LiveServer
-"nmap <Leader>bs :BraceyStop<CR>
-"" Reload LiveServer
-"nmap <Leader>br :BraceyReload<CR>
-
-" Insert a ; at the end of the current line
-nmap <Leader>; $a;<Esc>
-"
-" Search Occult
-nmap <Leader>/ :nohlsearch<CR>
+nnoremap <leader>gs :Gstatus<CR> " Estado de Git
+nnoremap <leader>gc :Gcommit<CR> " Hacer commit
+nnoremap <leader>gp :Gpush<CR> " Hacer push
 
 " Format all Code & current position
 nmap <Leader>f :set filetype<CR>gg=G
 nmap <Leader>F =ap
 
-" Run current file with Node
-nmap <Leader>x :!node %<CR>
-
-" Run current file with TS-Node
-"nmap <Leader>s :!ts-node %<CR>
-
 " Toggle line number mode
 nmap <Leader>rn :set rnu!<cr>
-"
-" Check Spelling
-nmap <Leader>pp :set spell!<cr>
-nmap <Leader>z z=
 
-"Copy full current file path in clipboard
-nmap <C-p> :let @+ = expand('%:p')<CR>
+"Copy into vim in visual mode - Remember install xclip in Linux
+vmap <C-c> "+y
+
+" ================== FZF ==================
+" Mapeo para buscar archivos en el directorio actual
+nmap <Leader>p :Files<CR>
+nmap <Leader>ag :Ag<CR>
+
+" Mapeo para buscar en el contenido de los archivos
+"nmap <Leader>fg :Ag<CR>
+
+" Mapeo para buscar en el historial de comandos
+nmap <Leader>fh :History<CR>
+
+" Mapeo para buscar en los buffers abiertos
+nmap <Leader>fb :Buffers<CR>
+
+" Mapeo para buscar en el repositorio Git
+nmap <Leader>fgit :GFiles<CR>
+
+" Mapeo para buscar en el contenido de Git
+nmap <Leader>fgc :Ggrep<CR>
+
+" Mapeo para buscar en el contenido de archivos abiertos
+nmap <Leader>fw :Rg<CR>
+
+" Mapeo para buscar en el contenido de archivos de texto
+nmap <Leader>ft :Tags<CR>
+
+" Mapeo para buscar en el contenido de archivos de configuración
+nmap <Leader>fc :CocList<CR>
+" ================== FZF END ==================
