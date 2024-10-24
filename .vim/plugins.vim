@@ -19,7 +19,14 @@ Plug 'airblade/vim-gitgutter'                               " Indicador de cambi
 
 Plug 'maximbaz/lightline-ale'                               " Errores y advertencias en la barra de estado
 Plug 'itchyny/lightline.vim'                                " Barra de estado personalizable y minimalista
-Plug 'itchyny/vim-gitbranch' " Rama actual de Git en la barra de estado
+Plug 'itchyny/vim-gitbranch'                                " Rama actual de Git en la barra de estado
+
+Plug 'jiangmiao/auto-pairs'                                 "Syntax close { --> {}
+
+"THEMES https://vimcolorschemes.com
+"Plug 'alexblackie/lunarised'                              " Theme light mode
+"Plug 'chriskempson/base16-vim'
+Plug 'jaredgorski/Mies.vim'
 
 call plug#end()
 

@@ -27,8 +27,14 @@ set autoindent
 set smartindent
 
 "Imports config
-so ./.vim/maps.vim
-so ./.vim/plugins.vim
+so $LOCALAPPDATA\nvim\.vim\maps.vim
+so $LOCALAPPDATA\nvim\.vim\plugins.vim
+
+"THEME
+"colorscheme lunarised
+"colorscheme base16-grayscale-light
+set background=light
+colorscheme mies
 
 " Habilitar el resaltado de sintaxis
 syntax on
