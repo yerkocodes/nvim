@@ -50,3 +50,14 @@ nmap <Leader>ft :Tags<CR>
 " Mapeo para buscar en el contenido de archivos de configuración
 nmap <Leader>fc :CocList<CR>
 " ================== FZF END ==================
+
+"Search keywords with The Silver Searcher
+nmap <Leader>ag :Ag<CR>
+
+"TABS moving
+nmap <C-n> :tabnew .<CR>
+nmap <C-Right> :tabnext <CR>
+nmap <C-Left> :tabprevious <CR>
+
+" Asigna Ctrl + . para activar la acción rápida de corrección (Code Action) en coc.nvim
+nmap <C-.> <Plug>(coc-codeaction)

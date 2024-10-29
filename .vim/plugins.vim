@@ -1,5 +1,5 @@
 " Usar vim-plug para gestionar plugins
-call plug#begin('~/.local/share/nvim/plugged')
+call plug#begin('/home/ycortes/.config/nvim/.vim/plugged')
 
 " Plugins esenciales
 Plug 'neoclide/coc.nvim', {'branch': 'release'}             " Autocompletado y LSP
@@ -23,10 +23,14 @@ Plug 'itchyny/vim-gitbranch'                                " Rama actual de Git
 
 Plug 'jiangmiao/auto-pairs'                                 "Syntax close { --> {}
 
+" SmoothScrolling
+Plug 'psliwka/vim-smoothie'                                 "Smoothing in scroll
+
 "THEMES https://vimcolorschemes.com
 "Plug 'alexblackie/lunarised'                              " Theme light mode
 "Plug 'chriskempson/base16-vim'
-Plug 'jaredgorski/Mies.vim'
+"Plug 'jaredgorski/Mies.vim'
+Plug 'gmr458/cold.nvim'
 
 call plug#end()
 
