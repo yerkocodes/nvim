@@ -38,8 +38,8 @@ so $HOME/.config/nvim/.vim/plugins.vim
 "THEME
 "colorscheme lunarised
 "colorscheme base16-grayscale-light
-set background=light
-colorscheme cold
+"set background=light
+colorscheme typewriter
 
 " Habilitar el resaltado de sintaxis
 syntax on
