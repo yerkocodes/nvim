@@ -1,5 +1,5 @@
 " Usar vim-plug para gestionar plugins
-call plug#begin('/home/ycortes/.config/nvim/.vim/plugged')
+call plug#begin(expand('$HOME/.config/nvim/.vim/plugged'))
 
 " Plugins esenciales
 Plug 'neoclide/coc.nvim', {'branch': 'release'}             " Autocompletado y LSP
