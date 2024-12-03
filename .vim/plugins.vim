@@ -33,6 +33,8 @@ Plug 'psliwka/vim-smoothie'                                 "Smoothing in scroll
 "Plug 'gmr458/cold.nvim'
 Plug 'logico/typewriter'
 
+Plug 'akinsho/git-conflict.nvim'
+
 call plug#end()
 
 "************ CONFIG ************
