@@ -29,11 +29,11 @@ Plug 'psliwka/vim-smoothie'                                 "Smoothing in scroll
 "THEMES https://vimcolorschemes.com
 "Plug 'alexblackie/lunarised'                              " Theme light mode
 "Plug 'chriskempson/base16-vim'
-"Plug 'jaredgorski/Mies.vim'
+Plug 'jaredgorski/Mies.vim'
 "Plug 'gmr458/cold.nvim'
-Plug 'logico/typewriter'
+"Plug 'logico/typewriter'
 
-Plug 'akinsho/git-conflict.nvim'
+Plug 'akinsho/git-conflict.nvim'                            " Conflictos de git
 
 call plug#end()
 
@@ -71,6 +71,29 @@ let g:indentLine_concealcursor = 'inc'
 let g:indentLine_conceallevel = 1
 
 "   Lightlane
+"let g:lightline = {
+            "\ 'colorscheme': 'wombat',
+            "\ 'active': {
+            "\   'left': [['mode', 'paste'], [], ['relativepath', 'modified']],
+            "\   'right': [['kitestatus'], ['filetype', 'percent', 'lineinfo'], ['gitbranch']]
+            "\ },
+            "\ 'inactive': {
+            "\   'left': [['inactive'], ['relativepath']],
+            "\   'right': [['bufnum']]
+            "\ },
+            "\ 'component': {
+            "\   'bufnum': '%n',
+            "\   'inactive': 'inactive'
+            "\ },
+            "\ 'component_function': {
+            "\   'gitbranch': 'gitbranch#name',
+            "\   'kitestatus': 'kite#statusline'
+            "\ },
+            "\ 'subseparator': {
+            "\   'left': '¦',
+            "\   'right': '¦'
+            "\ }
+            "\}
 let g:lightline = {
             \ 'colorscheme': 'wombat',
             \ 'active': {

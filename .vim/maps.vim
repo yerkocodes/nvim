@@ -61,3 +61,7 @@ nmap <C-Left> :tabprevious <CR>
 
 " Asigna Ctrl + . para activar la acción rápida de corrección (Code Action) en coc.nvim
 nmap <C-.> <Plug>(coc-codeaction)
+
+"KEYMAP TO CHANDE DARK AND LIGHT MODE
+nmap <Leader>dt :call ChangeTheme('dark', 'mies')<CR>
+nmap <Leader>lt :call ChangeTheme('light', 'mies')<CR>

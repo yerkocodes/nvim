@@ -34,12 +34,15 @@ set smartindent
 "Imports config
 so $HOME/.config/nvim/.vim/maps.vim
 so $HOME/.config/nvim/.vim/plugins.vim
+so $HOME/.config/nvim/.vim/functions.vim
 
 "THEME
 "colorscheme lunarised
 "colorscheme base16-grayscale-light
-"set background=light
-colorscheme typewriter
+"colorscheme typewriter
+"
+colorscheme mies
+set background=light
 
 " Habilitar el resaltado de sintaxis
 syntax on
