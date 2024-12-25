@@ -3,6 +3,7 @@ let mapleader=" "
 nmap <Leader>w :w<CR>
 nmap <Leader>q :q<CR>
 nmap <Leader>wq :q<CR>
+nmap <C-s> :w<CR>
 
 "NERDTreeFind
 nmap <Leader>nt :NERDTreeFind<CR>

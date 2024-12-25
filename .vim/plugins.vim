@@ -35,6 +35,8 @@ Plug 'jaredgorski/Mies.vim'
 
 Plug 'akinsho/git-conflict.nvim'                            " Conflictos de git
 
+Plug 'severin-lemaignan/vim-minimap'
+
 call plug#end()
 
 "************ CONFIG ************
@@ -54,7 +56,7 @@ call plug#end()
 let g:coc_global_extensions = ['coc-tsserver', 'coc-html', 'coc-css', 'coc-angular', 'coc-prettier', 'coc-eslint', 'coc-json', 'coc-snippets']
 
 " Configuración de Prettier
-let g:prettier#autoformat = 1
+let g:prettier#autoformat = 0
 let g:prettier#autoformat_require_pragma = 0
 
 " NERDTREE
@@ -117,3 +119,4 @@ let g:lightline = {
             \   'right': '¦'
             \ }
             \}
+
