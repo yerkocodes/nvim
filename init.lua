@@ -1,4 +1,4 @@
--- Bootstrap lazy.nvim
+-- Configurar Lazy.nvim (instalación automática)
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -12,12 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- Set leader key to space (must be before lazy setup)
-vim.g.mapleader = " "
+-- Cargar configuraciones básicas
+require('core.options')
+require('core.keymaps')
 
--- Initialize lazy.nvim
-require("lazy").setup("config.plugins")
-
--- Load other configurations
-require('config.options')
-require('config.keymaps')
+-- Configurar e inicializar plugins
+require("lazy").setup("plugins.init")
