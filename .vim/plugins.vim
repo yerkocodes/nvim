@@ -29,9 +29,9 @@ Plug 'psliwka/vim-smoothie'                                 "Smoothing in scroll
 "THEMES https://vimcolorschemes.com
 "Plug 'alexblackie/lunarised'                              " Theme light mode
 "Plug 'chriskempson/base16-vim'
-Plug 'jaredgorski/Mies.vim'
+"Plug 'jaredgorski/Mies.vim'
 "Plug 'gmr458/cold.nvim'
-"Plug 'logico/typewriter'
+Plug 'logico/typewriter'
 
 Plug 'akinsho/git-conflict.nvim'                            " Conflictos de git
 

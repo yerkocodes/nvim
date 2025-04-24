@@ -66,3 +66,5 @@ nmap <C-.> <Plug>(coc-codeaction)
 "KEYMAP TO CHANDE DARK AND LIGHT MODE
 nmap <Leader>dt :call ChangeTheme('dark', 'mies')<CR>
 nmap <Leader>lt :call ChangeTheme('light', 'mies')<CR>
+
+vmap <C-z> u

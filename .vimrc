@@ -39,9 +39,11 @@ so $HOME/.config/nvim/.vim/functions.vim
 "THEME
 "colorscheme lunarised
 "colorscheme base16-grayscale-light
-"colorscheme typewriter
-"
-colorscheme mies
+
+"colorscheme mies
+
+colorscheme typewriter
+
 set background=light
 
 " Habilitar el resaltado de sintaxis
