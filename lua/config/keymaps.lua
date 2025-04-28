@@ -1,21 +1,35 @@
--- ~/.config/nvim/lua/config/keymaps.lua
+-- 1. Primero define el líder
+vim.g.mapleader = " "
+vim.g.maplocalleader = "\\"  -- Líder para buffers locales (opcional)
 
-local map = vim.api.nvim_set_keymap
-local opts = { noremap = true, silent = true }
+local function map(mode, lhs, rhs, opts)
+  local options = { noremap = true, silent = true }
+  if opts then
+    options = vim.tbl_extend('force', options, opts)
+  end
+  vim.keymap.set(mode, lhs, rhs, options)
+end
 
--- Abre nvim-tree
-map('n', '<C-n>', ':NvimTreeToggle<CR>', opts)
+-- Atajos básicos
+map('n', '<Leader>w', ':w<CR>', { desc = 'Guardar archivo' })
+map('n', '<Leader>q', ':q<CR>', { desc = 'Cerrar ventana' })
+map('n', '<Leader>wq', ':wq<CR>', { desc = 'Guardar y cerrar' })
+map('n', '<C-s>', ':w<CR>', { desc = 'Guardar archivo (Ctrl+s)' })
 
--- Abre la terminal integrada
-map('n', '<C-t>', ':ToggleTerm<CR>', opts)
+-- Manejo de portapapeles
+map('v', '<C-c>', '"+y', { desc = 'Copiar al portapapeles del sistema' })
 
--- Navegación entre buffers
-map('n', '<S-l>', ':bnext<CR>', opts)
-map('n', '<S-h>', ':bprevious<CR>', opts)
+-- Manejo de pestañas
+map('n', '<C-n>', ':tabnew .<CR>', { desc = 'Nueva pestaña' })
+map('n', '<C-Right>', ':tabnext<CR>', { desc = 'Siguiente pestaña' })
+map('n', '<C-Left>', ':tabprevious<CR>', { desc = 'Pestaña anterior' })
 
--- Mapeos para LSP
-map('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-map('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-map('n', '<leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
-map('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+-- Deshabilitar suspensión con Ctrl+z (opcional)
+map('n', '<C-z>', '<Nop>')
+map('i', '<C-z>', '<Nop>')
+
+-- Undo con Ctrl+z (comportamiento como 'u')
+map('n', '<C-z>', 'u', { desc = 'Deshacer (undo)' })
+map('i', '<C-z>', '<C-o>u', { desc = 'Deshacer en modo inserción' })
+
+map('n', '<Leader>nt', ':NvimTreeToggle<CR>', opts)
