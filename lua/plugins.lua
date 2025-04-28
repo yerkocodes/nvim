@@ -33,11 +33,6 @@ return {
     "RRethy/vim-illuminate",
 
     -- Temas
-    --"navarasu/onedark.nvim",
-    --"folke/tokyonight.nvim",
-    --"lunarvim/colorschemes",
-    --"kdheepak/monochrome.nvim",
-    --"jaredgorski/Mies.vim",
     {
       "jaredgorski/Mies.vim",
       lazy = false,
