@@ -1,11 +1,12 @@
-require("config.lazy")
+-- ~/.config/nvim/init.lua
 
--- Configuración básica de nvim-tree
-require("nvim-tree").setup({
-  view = {
-    width = 30,  -- ancho de la ventana
-  },
-  filters = {
-    dotfiles = false,  -- mostrar archivos ocultos
-  },
-})
+-- Cargar configuraciones
+require("config.settings")  -- Configuraciones generales
+require("config.keymaps")    -- Mapeo de teclas
+require("config.lsp")        -- Configuración de LSP
+require("config.cmp")        -- Configuración de nvim-cmp
+require("config.theme")      -- Configuración del tema
+require("plugins")           -- Gestión de plugins
+require("config.lazy")
+require("config.nvimtree")   -- Configuración de nvim-tree
+require("config.lazy")       -- Configuración de lazy.nvim

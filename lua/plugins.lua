@@ -16,10 +16,10 @@ return {
     -- Autocompletado y Snippets
     "hrsh7th/nvim-cmp",
     "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-nvim-lsp",
     "hrsh7th/cmp-path",
-    "L3MON4D3/LuaSnip",
+    "hrsh7th/cmp-nvim-lsp",
     "saadparwaiz1/cmp_luasnip",
+    "L3MON4D3/LuaSnip",
     "rafamadriz/friendly-snippets",
 
     -- Interfaz y UX
@@ -33,10 +33,20 @@ return {
     "RRethy/vim-illuminate",
 
     -- Temas
-    "navarasu/onedark.nvim",
-    "folke/tokyonight.nvim",
-    "lunarvim/colorschemes",
-    "jaredgorski/Mies.vim",
+    --"navarasu/onedark.nvim",
+    --"folke/tokyonight.nvim",
+    --"lunarvim/colorschemes",
+    --"kdheepak/monochrome.nvim",
+    --"jaredgorski/Mies.vim",
+    {
+      "jaredgorski/Mies.vim",
+      lazy = false,
+      priority = 1000,
+      config = function()
+        vim.o.background = "light"
+        vim.cmd("colorscheme mies")  -- Aplicar aquí directamente
+      end
+    },
 
     -- Productividad
     "numToStr/Comment.nvim",
