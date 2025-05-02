@@ -36,6 +36,7 @@ Plug 'logico/typewriter'
 Plug 'akinsho/git-conflict.nvim'                            " Conflictos de git
 
 Plug 'severin-lemaignan/vim-minimap'
+Plug 'ryanoasis/vim-devicons'
 
 call plug#end()
 

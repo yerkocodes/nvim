@@ -43,8 +43,12 @@ so $HOME/.config/nvim/.vim/functions.vim
 "colorscheme mies
 
 colorscheme typewriter
+"colorscheme typewriter-night
 
-set background=light
+"set background=light
+
+highlight Normal ctermbg=none guibg=none
+highlight NormalFloat ctermbg=none guibg=none
 
 " Habilitar el resaltado de sintaxis
 syntax on
