@@ -19,4 +19,10 @@ return require('packer').startup(function(use)
 	  vim.cmd 'colorscheme monochrome'
   end}
 
+  -- Treesitter
+  --Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
+  use('theprimeagen/harpoon')
+
 end)
