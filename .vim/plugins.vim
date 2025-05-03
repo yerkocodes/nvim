@@ -26,12 +26,11 @@ Plug 'jiangmiao/auto-pairs'                                 "Syntax close { --> 
 " SmoothScrolling
 Plug 'psliwka/vim-smoothie'                                 "Smoothing in scroll
 
-"THEMES https://vimcolorschemes.com
-"Plug 'alexblackie/lunarised'                              " Theme light mode
-"Plug 'chriskempson/base16-vim'
+"THEMES
 "Plug 'jaredgorski/Mies.vim'
-"Plug 'gmr458/cold.nvim'
-Plug 'logico/typewriter'
+"Plug 'logico/typewriter'
+"Plug 'felipevolpone/mono-theme'
+Plug 'jaredgorski/fogbell.vim'
 
 Plug 'akinsho/git-conflict.nvim'                            " Conflictos de git
 
