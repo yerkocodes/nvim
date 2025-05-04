@@ -15,14 +15,20 @@ return require('packer').startup(function(use)
   }
 
   -- Colorscheme
-  use {'kdheepak/monochrome.nvim', config = function()
+   use {'kdheepak/monochrome.nvim', config = function()
 	  vim.cmd 'colorscheme monochrome'
-  end}
+   end}
+
+  --use {'jaredgorski/fogbell.vim', config = function()
+	  --vim.cmd 'colorscheme fogbell_light'
+  --end}
 
   -- Treesitter
   --Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
 
   use('theprimeagen/harpoon')
+  use('mbbill/undotree')
+  use('tpope/vim-fugitive')
 
 end)

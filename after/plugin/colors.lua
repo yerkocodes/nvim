@@ -1,4 +1,5 @@
 function ColorMyPencils(color)
+	--color = color or "fogbell_light"
 	color = color or "monochrome"
 	vim.cmd.colorscheme(color)
 

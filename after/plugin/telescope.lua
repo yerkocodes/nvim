@@ -1,6 +1,6 @@
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>p', builtin.find_files, { desc = 'Telescope find files' })
 vim.keymap.set('n', '<C-p>', builtin.git_files, { desc = 'Git find files' })
-vim.keymap.set('n', '<Leader>ps', function()
+vim.keymap.set('n', '<Leader>ag', function()
 	builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end)
