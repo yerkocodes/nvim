@@ -29,9 +29,9 @@ so $HOME/.config/nvim/.vim/plugins.vim
 so $HOME/.config/nvim/.vim/functions.vim
 
 "THEME
-colorscheme fogbell_light
-
-"set background=light
+"colorscheme fogbell_light
+colorscheme yang
+set background=light
 
 " Habilitar el resaltado de sintaxis
 syntax on
