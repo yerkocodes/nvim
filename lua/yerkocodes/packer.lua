@@ -31,4 +31,18 @@ return require('packer').startup(function(use)
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
 
+  -- ******** LSP **********
+  -- Plugin para gestión de LSP
+  use 'neovim/nvim-lspconfig'
+  -- Plugin para instalar LSPs
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+  -- Plugin para autocompletado (necesario para las capacidades)
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  -- ******** LSP **********
+
+  -- Diagnosticos
+  use 'folke/trouble.nvim'
+
 end)

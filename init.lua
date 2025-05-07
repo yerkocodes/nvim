@@ -1,2 +1,5 @@
 require("yerkocodes")
-print("hellou")
+require('yerkocodes.lsp.init')
+require('yerkocodes.lsp.config')
+require('yerkocodes.cmp')
+require('lua.yerkocodes.diagnostics')
