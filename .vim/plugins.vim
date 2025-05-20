@@ -32,6 +32,7 @@ Plug 'psliwka/vim-smoothie'                                 "Smoothing in scroll
 "Plug 'felipevolpone/mono-theme'
 Plug 'jaredgorski/fogbell.vim'
 Plug 'pgdouyon/vim-yin-yang'
+Plug 'alexxgmz/e-ink.nvim'
 
 Plug 'akinsho/git-conflict.nvim'                            " Conflictos de git
 

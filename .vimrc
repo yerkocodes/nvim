@@ -30,7 +30,8 @@ so $HOME/.config/nvim/.vim/functions.vim
 
 "THEME
 "colorscheme fogbell_light
-colorscheme yang
+"colorscheme yang set background=light
+colorscheme e-ink 
 set background=light
 
 " Habilitar el resaltado de sintaxis
